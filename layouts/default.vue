@@ -1,5 +1,23 @@
 <template>
   <div>
+    <b-navbar toggleable="lg" type="dark" variant="info" >
+      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item>
+            <n-link to="/">Home</n-link>
+          </b-nav-item>
+          <b-nav-item>
+            <n-link to="/weather-app">Weather App</n-link>
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
     <Nuxt />
   </div>
 </template>
@@ -58,5 +76,14 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #444;
 }
 </style>
